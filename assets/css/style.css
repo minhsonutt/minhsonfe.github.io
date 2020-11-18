@@ -1,0 +1,716 @@
+/*
+   Theme Name : Start Bootstrap
+   Theme Description : Learning Frontend
+   Author : Phan Minh Son
+   Version : 1.0.0
+*/
+/*
+ ============================= Table Of Content  =============================
+ 1, Setting
+ 2, Header
+ 3, Banner
+ 4, Portfolio
+ 5, About
+ 6, Contact
+ 7, Footer
+*/
+
+/* ============================= 1, Setting  ============================= */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+:root {
+    --purple: #2c3e50;
+    --white: #ffffff;
+    --bg-green: #1abc9c;
+    --font: 'Montserrat', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.mx-auto {
+    margin: auto;
+}
+
+.pd25 {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+}
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0 2.5rem 0;
+}
+
+.line__icon {
+    color: var(--purple);
+    font-size: 3.7rem;
+}
+
+.line__item {
+    width: 11.2rem;
+    height: .4rem;
+    background-color: var(--purple);
+    border-radius: 3px;
+}
+
+.line__item:first-child {
+    margin-right: 1.3rem;
+}
+
+.line__item:last-child {
+    margin-left: 1.3rem;
+}
+
+.color-w {
+    color: var(--white);
+}
+
+.bg-w {
+    background-color: var(--white);
+}
+
+/* ============================= 2, Header  ============================= */
+.header {
+    background-color: var(--purple);
+    padding: 4rem 0;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.header .header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header .header__menu .header__menu-logo {
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    font-size: 2.5rem;
+}
+
+.header .header__menu-btn {
+    background-color: var(--bg-green);
+    color: var(--white);
+    border: unset;
+    outline: none;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.7rem;
+    font-family: var(--font);
+    font-weight: 700;
+    display: none;
+    cursor: pointer;
+}
+
+.header .header__menu-btn:hover {
+    background-color: rgb(23, 168, 144);
+}
+
+.header .header__menu .header__menu-list {
+    display: flex;
+}
+
+.header .header__menu .header__menu-list .list__item .list__item-link {
+    color: var(--white);
+    font-weight: 700;
+    padding-left: 3rem;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.header .header__menu .header__menu-list .list__item .list__item-link:hover {
+    color: var(--bg-green);
+    outline: 1px solid var(--white);
+    outline: unset;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .header .header__menu .header__menu-logo {
+        font-size: 2rem !important;
+    }
+
+    .header .header__menu .header__menu-list .list__item .list__item-link {
+        font-size: 1.7rem;
+
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .header {
+        padding: 2rem 0 1.5rem 0 !important;
+    }
+
+    .header .header__menu .header__menu-logo {
+        font-size: 2rem !important;
+    }
+
+    .header .header__menu-btn {
+        padding: 1.2rem;
+        display: block;
+    }
+
+    .header__menu .header__menu-list {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex-grow: 1;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .7s;
+        margin-top: 1rem;
+    }
+
+    .header .header__menu .header__menu-list.show {
+        max-height: 200px;
+        transition: all .7s;
+        max-height: 300px;
+    }
+
+    .header .header__menu .header__menu-list .list__item {
+        padding: 2rem 0;
+
+    }
+
+    .header .header__menu .header__menu-list .list__item .list__item-link {
+        font-size: 1.7rem;
+        padding-left: 0;
+
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 1.5rem 0 0.5rem 0 !important;
+    }
+
+    .header .header__menu .header__menu-list .list__item .list__item-link {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .header .header__menu .header__menu-logo {
+        font-size: 2rem !important;
+    }
+}
+
+/* ============================= 3, Banner  ============================= */
+
+.banner {
+    background-color: var(--bg-green);
+}
+
+.banner .banner__inner {
+    padding: 20rem 0 10rem 0;
+}
+
+.banner .banner__img {
+    width: 24rem;
+    height: 25rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.banner .banner__heading {
+    font-size: 6.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--font);
+    text-align: center;
+}
+
+.banner .banner__subheading {
+    text-align: center;
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .banner .banner__heading {
+        font-size: 5rem;
+    }
+
+    .banner .banner__subheading {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner .banner__heading {
+        font-size: 4.4rem;
+    }
+
+    .portfolio .portfolio__heading-tile {
+        font-size: 3.7rem;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+    .banner .banner__inner {
+      padding: 15rem 0 10rem 0;
+    }
+
+    .banner .banner__heading {
+        font-size: 4.4rem;
+    }
+
+    .banner .banner__subheading {
+        font-size: 2rem;
+        line-height: 2.7rem;
+    }
+
+    .portfolio .portfolio__heading-tile {
+        font-size: 3.7rem;
+    }
+
+}
+
+@media screen and (min-width:321px) and (max-width: 449px) {
+    .banner .banner__line {
+        max-width: 9.5rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .banner .banner__line {
+        max-width: 8.7rem;
+        width: 100%;
+    }
+}
+
+/* ============================= 4, Portfolio  ============================= */
+
+.portfolio {
+    padding: 7.5rem 0 4rem 0;
+}
+
+.portfolio .portfolio__heading-tile,
+.contact__heading-tile {
+    font-size: 4.7rem;
+    color: var(--purple);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio__-line:first-child {
+    margin-right: 1rem;
+}
+
+.portfolio__item {
+    overflow: hidden;
+    border-radius: 1.2rem;
+    margin-bottom: 5rem;
+    position: relative;
+    max-width: 40rem;
+}
+
+.portfolio__item:hover .portfolio__overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio__img {
+    display: block;
+    border-radius: 1.2rem;
+}
+
+.portfolio__overlay {
+    position: absolute;
+    font-size: 13rem;
+    font-weight: 600;
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(26, 188, 156, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: 1.2rem;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .portfolio .portfolio__heading-tile {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .portfolio .port__line {
+        max-width: 10rem;
+        width: 100%;
+    }
+}
+
+
+/* ============================= 5, About  ============================= */
+
+.about {
+    background-color: var(--bg-green);
+    padding: 10rem 0;
+}
+
+.about .about__heading-tile {
+    font-size: 4.7rem;
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about .about__content {
+    justify-content: center;
+}
+
+.about .about__content-des {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--white);
+    font-family: var(--font);
+    line-height: 1.5;
+}
+
+.about .about__download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about__download-btn {
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    padding: 1.8rem 2.4rem;
+    margin-top: 4rem;
+    text-align: center;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: all .2s;
+}
+
+.about .about__download-btn:hover {
+    color: #000;
+    background-color: var(--white);
+}
+
+.about__download-icon {
+    margin-right: .5rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .about .about__content {
+        width: 100%;
+    }
+
+    .about .about__heading-tile {
+        font-size: 3.5rem;
+    }
+
+    .about .about__content-des {
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about .about__content {
+        width: 100%;
+    }
+
+    .about .about__content-des:first-child {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+   .about .about__content-des {
+    font-size: 1.8rem;
+}
+}
+
+
+@media only screen and (max-width: 320px) {
+    .about .about__line {
+        max-width: 10rem;
+        width: 100%;
+    }
+}
+
+/* ============================= 6, Contact  ============================= */
+
+.contact {
+    padding: 9.6rem 0;
+}
+
+.contact-form__group {
+    border-bottom: 1px solid #e9ecef;
+    padding: 4rem 0;
+    padding-left: 0;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+.form__inner {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.contact-form__input {
+    border: unset;
+    outline: 0;
+    font-size: 2rem;
+    font-family: var(--font);
+    font-weight: 500;
+    width: 100%;
+}
+
+.contact-form__input::placeholder {
+    font-family: var(--font);
+    color: #495057;
+}
+
+.contact-form__group textarea {
+    resize: none;
+}
+
+.contact-form__input:placeholder-shown+.form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+.contact-form__input:placeholder-shown+.lable-area.form__label {
+    transform: translateY(-10rem);
+}
+
+.lable-area.form__label {
+    transform: translateY(-14rem);
+}
+
+.form__label {
+    font-size: 1.2rem;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-5rem);
+    color: #1abc9c;
+    font-weight: 500;
+}
+
+.contact-form__btn {
+    position: absolute;
+    color: var(--white);
+    background-color: var(--bg-green);
+    padding: 2rem 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    bottom: 0;
+    transform: translateY(150%);
+    font-family: var(--font-lato);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.contact-form__btn:hover {
+    background-color: rgb(23, 168, 144);
+}
+
+
+@media only screen and (max-width: 992px) {
+    .contact .contact__heading-tile {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    .contact__line {
+        max-width: 9.5rem;
+        width: 100%;
+    }
+}
+
+/* ============================= 7, Footer  ============================= */
+
+.footer {
+    background-color: var(--purple);
+    padding: 8rem 0 0 0;
+    margin-top: 10rem;
+}
+
+.footer .footer__inner {
+    padding: 0 4rem 4rem 4rem;
+}
+
+.footer .footer__content {
+    text-align: center;
+}
+
+.footer .footer__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.footer .footer__info {
+    font-size: 1.7rem;
+    color: var(--white);
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+.footer .footer__info a {
+    color: var(--bg-green);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.footer .footer__info a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer__social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer__social a {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    border-color: var(--white);
+    margin: 0 .5rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+
+.footer .footer__social a:hover {
+    background-color: var(--white);
+    color: var(--purple);
+}
+
+.footer .footer__copyright {
+    text-align: center;
+    background-color: #1a252f;
+}
+
+.footer .footer__copyright small {
+    padding: 2.4rem 0;
+    display: inline-block;
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    .footer .footer__content {
+        margin-bottom: 5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .footer .footer__inner {
+        padding: 0 1rem 4rem 1rem;
+    }
+
+}
+
+/* ============================= 8, Back top top  ============================= */
+.to-top {
+    background: #15121259;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+
+}
